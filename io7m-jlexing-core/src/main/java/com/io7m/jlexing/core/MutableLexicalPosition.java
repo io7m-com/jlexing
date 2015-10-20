@@ -80,6 +80,22 @@ public final class MutableLexicalPosition<F>
     return new MutableLexicalPosition<>(line, column, Optional.empty());
   }
 
+  /**
+   * Construct a new position.
+   *
+   * @param p   An existing position value
+   * @param <F> The type of file names or paths
+   *
+   * @return A new position
+   */
+
+  public static <F> MutableLexicalPositionType<F> newFrom(
+    final LexicalPositionType<F> p)
+  {
+    return new MutableLexicalPosition<>(
+      p.getLine(), p.getColumn(), p.getFile());
+  }
+
   @Override public boolean equals(final Object o)
   {
     if (this == o) {
