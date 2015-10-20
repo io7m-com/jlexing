@@ -23,6 +23,12 @@ public final class MutableLexicalPositionTest
   extends MutableLexicalPositionContract<String,
   MutableLexicalPositionType<String>>
 {
+  @Override protected MutableLexicalPositionType<String> newPositionFrom(
+    final MutableLexicalPositionType<String> x)
+  {
+    return MutableLexicalPosition.newFrom(x);
+  }
+
   @Override protected MutableLexicalPositionType<String> newPosition()
   {
     return MutableLexicalPosition.newPosition(0, 0);

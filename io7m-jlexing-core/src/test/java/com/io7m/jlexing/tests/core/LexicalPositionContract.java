@@ -25,6 +25,8 @@ import java.util.Optional;
 public abstract class LexicalPositionContract<F, T extends
   LexicalPositionType<F>>
 {
+  protected abstract T newPositionFrom(T x);
+
   protected abstract T newPosition();
 
   protected abstract T newPositionLC(
@@ -66,6 +68,15 @@ public abstract class LexicalPositionContract<F, T extends
     final Optional<F> f_opt = x.getFile();
     Assert.assertTrue(f_opt.isPresent());
     Assert.assertEquals(f, f_opt.get());
+  }
+
+  @Test public final void testNewFrom()
+  {
+    final F f = this.newFile("hello.txt");
+    final T x = this.newPositionLCWith(23, 32, f);
+    final T y = this.newPositionFrom(x);
+    Assert.assertEquals(x, y);
+    Assert.assertNotSame(x, y);
   }
 
   @Test public final void testToString0()

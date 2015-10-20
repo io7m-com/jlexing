@@ -22,6 +22,12 @@ import com.io7m.jlexing.core.ImmutableLexicalPositionType;
 public final class ImmutableLexicalPositionTest
   extends LexicalPositionContract<String, ImmutableLexicalPositionType<String>>
 {
+  @Override protected ImmutableLexicalPositionType<String> newPositionFrom(
+    final ImmutableLexicalPositionType<String> x)
+  {
+    return ImmutableLexicalPosition.newFrom(x);
+  }
+
   @Override protected ImmutableLexicalPositionType<String> newPosition()
   {
     return ImmutableLexicalPosition.newPosition(0, 0);
