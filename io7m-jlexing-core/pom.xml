@@ -8,7 +8,7 @@
   <parent>
     <groupId>com.io7m.jlexing</groupId>
     <artifactId>io7m-jlexing</artifactId>
-    <version>0.1.2</version>
+    <version>0.2.0</version>
   </parent>
   <artifactId>io7m-jlexing-core</artifactId>
 
