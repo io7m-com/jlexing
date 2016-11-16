@@ -1,5 +1,5 @@
 /*
- * Copyright © 2015 <code@io7m.com> http://io7m.com
+ * Copyright © 2016 <code@io7m.com> http://io7m.com
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -16,52 +16,39 @@
 
 package com.io7m.jlexing.core;
 
-import com.io7m.jnull.NullCheck;
-import com.io7m.jnull.Nullable;
+import org.immutables.value.Value;
 
 import java.util.Optional;
 
 /**
  * The type of lexical positions.
  *
- * @param <F> The type of file names or paths
+ * @param <F> The type of file information
  */
 
+@ImmutableStyleType
+@Value.Immutable
+@Value.Modifiable
 public interface LexicalPositionType<F>
-  extends Comparable<LexicalPositionType<F>>
 {
   /**
    * @return The line number
    */
 
-  int getLine();
+  @Value.Parameter
+  int line();
 
   /**
    * @return The column number
    */
 
-  int getColumn();
+  @Value.Parameter
+  int column();
 
   /**
    * @return The file, if any
    */
 
-  Optional<F> getFile();
-
-  @Override default int compareTo(final @Nullable LexicalPositionType<F> o)
-  {
-    /**
-     * Lexical positions are simply compared by line and column number, with
-     * files being ignored.
-     */
-
-    // CHECKSTYLE:OFF
-    final LexicalPositionType<F> on = NullCheck.notNull(o);
-    final int lc = Integer.compareUnsigned(this.getLine(), on.getLine());
-    if (lc == 0) {
-      return Integer.compareUnsigned(this.getColumn(), on.getColumn());
-    }
-    return lc;
-    // CHECKSTYLE:ON
-  }
+  @Value.Parameter
+  Optional<F> file();
 }

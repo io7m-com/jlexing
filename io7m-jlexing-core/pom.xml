@@ -8,7 +8,7 @@
   <parent>
     <groupId>com.io7m.jlexing</groupId>
     <artifactId>io7m-jlexing</artifactId>
-    <version>0.1.2</version>
+    <version>0.2.0</version>
   </parent>
   <artifactId>io7m-jlexing-core</artifactId>
 
@@ -29,8 +29,9 @@
       <artifactId>io7m-jnull-core</artifactId>
     </dependency>
     <dependency>
-      <groupId>com.io7m.jcip</groupId>
-      <artifactId>jcip-annotations</artifactId>
+      <groupId>org.immutables</groupId>
+      <artifactId>value</artifactId>
+      <scope>provided</scope>
     </dependency>
 
     <dependency>

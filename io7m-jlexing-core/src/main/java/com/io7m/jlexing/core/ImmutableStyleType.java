@@ -1,5 +1,5 @@
 /*
- * Copyright © 2015 <code@io7m.com> http://io7m.com
+ * Copyright © 2016 <code@io7m.com> http://io7m.com
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -16,13 +16,31 @@
 
 package com.io7m.jlexing.core;
 
+import org.immutables.value.Value;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
 /**
- * The type of immutable lexical positions.
- *
- * @param <F> The type of file names or paths
+ * The {@code immutables.org} style for the project.
  */
 
-public interface ImmutableLexicalPositionType<F> extends LexicalPositionType<F>
+@Target({ElementType.PACKAGE, ElementType.TYPE})
+@Retention(RetentionPolicy.CLASS)
+@Value.Style(
+  get = {"is*", "get*"},
+  init = "set*",
+  typeAbstract = {"Abstract*", "*Type"},
+  typeImmutable = "*",
+  typeModifiable = "*Mutable",
+  builder = "builder",
+  build = "build",
+  visibility = Value.Style.ImplementationVisibility.PUBLIC,
+  defaults = @Value.Immutable(copy = true))
+public @interface ImmutableStyleType
 {
-  // No extra functions
+  // No value-level representation
 }
+
