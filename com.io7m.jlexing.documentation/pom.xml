@@ -18,7 +18,7 @@
   <url>http://io7m.github.io/jlexing/</url>
 
   <properties>
-    <io7m.api.japicmp.skip>true</io7m.api.japicmp.skip>
+    <mdep.analyze.skip>true</mdep.analyze.skip>
   </properties>
 
   <scm>
@@ -28,6 +28,12 @@
   </scm>
 
   <dependencies>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>com.io7m.jlexing.core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>com.io7m.jnull</groupId>
       <artifactId>com.io7m.jnull.core</artifactId>
