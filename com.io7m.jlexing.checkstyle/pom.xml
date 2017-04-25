@@ -17,10 +17,6 @@
   <description>Lexing primitives (Checkstyle policy)</description>
   <url>http://io7m.github.io/jlexing/</url>
 
-  <properties>
-    <io7m.api.previousArtifactId>io7m-jlexing-checkstyle</io7m.api.previousArtifactId>
-  </properties>
-
   <scm>
     <url>${project.parent.scm.url}</url>
     <connection>${project.parent.scm.connection}</connection>
