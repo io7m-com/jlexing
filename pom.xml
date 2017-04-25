@@ -13,7 +13,7 @@
 
   <groupId>com.io7m.jlexing</groupId>
   <artifactId>com.io7m.jlexing</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
 
   <packaging>pom</packaging>
   <name>com.io7m.jlexing</name>
@@ -31,7 +31,7 @@
     <siteDocumentationDirectory>com/io7m/jlexing/com.io7m.jlexing.documentation</siteDocumentationDirectory>
     <io7m.checkstyle.artifact>com.io7m.jlexing.checkstyle</io7m.checkstyle.artifact>
     <io7m.checkstyle.path>/com/io7m/jlexing/checkstyle/checkstyle.xml</io7m.checkstyle.path>
-    <io7m.api.previousVersion>0.2.0</io7m.api.previousVersion>
+    <io7m.api.previousVersion>1.0.0</io7m.api.previousVersion>
   </properties>
 
   <licenses>
@@ -71,6 +71,10 @@
       <id>sonatype-nexus-staging</id>
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
+    <snapshotRepository>
+      <id>sonatype-nexus-snapshots</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <ciManagement>
@@ -87,6 +91,11 @@
       <dependency>
         <groupId>com.io7m.jnull</groupId>
         <artifactId>com.io7m.jnull.core</artifactId>
+        <version>[1.0.0, 2.0.0)</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.junreachable</groupId>
+        <artifactId>com.io7m.junreachable.core</artifactId>
         <version>[1.0.0, 2.0.0)</version>
       </dependency>
 

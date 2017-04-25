@@ -18,6 +18,7 @@ package com.io7m.jlexing.tests.core;
 
 import com.io7m.jlexing.core.LexicalPosition;
 import com.io7m.jlexing.core.LexicalPositionType;
+import com.io7m.jlexing.core.LexicalPositions;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -143,7 +144,7 @@ public final class LexicalPositionTest
       LexicalPosition.of(1, 0, Optional.of(path0));
 
     Assert.assertEquals(base, LexicalPosition.copyOf(base));
-    Assert.assertEquals(base, LexicalPosition.copyOf(new LexicalPositionType() {
+    Assert.assertEquals(base, LexicalPosition.copyOf(new LexicalPositionType<Path>() {
       @Override
       public int line()
       {
@@ -195,5 +196,21 @@ public final class LexicalPositionTest
     b1.from(p);
 
     Assert.assertEquals(p, b1.build());
+  }
+
+  @Test
+  public void testZero()
+  {
+    Assert.assertEquals(
+      LexicalPosition.of(0, 0, Optional.empty()),
+      LexicalPositions.zero());
+  }
+
+  @Test
+  public void testZeroWithFile()
+  {
+    Assert.assertEquals(
+      LexicalPosition.of(0, 0, Optional.of(Integer.valueOf(23))),
+      LexicalPositions.zeroWithFile(Integer.valueOf(23)));
   }
 }
