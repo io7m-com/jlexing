@@ -15,13 +15,13 @@
  */
 
 /**
- * Lexing primitives (Core)
+ * Documentation.
  */
 
-module com.io7m.jlexing.core
+module com.io7m.jlexing.documentation
 {
-  requires static org.immutables.value;
   requires com.io7m.junreachable.core;
+  requires com.io7m.jlexing.core;
 
-  exports com.io7m.jlexing.core;
+  exports com.io7m.jlexing.documentation;
 }
