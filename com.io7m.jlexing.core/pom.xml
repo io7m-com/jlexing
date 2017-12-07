@@ -8,7 +8,7 @@
   <parent>
     <groupId>com.io7m.jlexing</groupId>
     <artifactId>com.io7m.jlexing</artifactId>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
   </parent>
   <artifactId>com.io7m.jlexing.core</artifactId>
 
@@ -17,17 +17,7 @@
   <description>Lexing primitives (Core)</description>
   <url>http://io7m.github.io/jlexing/</url>
 
-  <scm>
-    <url>${project.parent.scm.url}</url>
-    <connection>${project.parent.scm.connection}</connection>
-    <developerConnection>${project.parent.scm.developerConnection}</developerConnection>
-  </scm>
-
   <dependencies>
-    <dependency>
-      <groupId>com.io7m.jnull</groupId>
-      <artifactId>com.io7m.jnull.core</artifactId>
-    </dependency>
     <dependency>
       <groupId>com.io7m.junreachable</groupId>
       <artifactId>com.io7m.junreachable.core</artifactId>
@@ -54,6 +44,21 @@
         <artifactId>maven-checkstyle-plugin</artifactId>
       </plugin>
 
+      <!-- Process annotations -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <annotationProcessorPaths>
+            <dependency>
+              <groupId>org.immutables</groupId>
+              <artifactId>value</artifactId>
+              <version>${io7m.org.immutables.version}</version>
+            </dependency>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
+
       <!-- Produce OSGi bundle -->
       <plugin>
         <groupId>org.apache.felix</groupId>
@@ -66,6 +71,12 @@
             </Export-Package>
           </instructions>
         </configuration>
+      </plugin>
+
+      <!-- Determine test coverage -->
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>

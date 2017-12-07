@@ -1,5 +1,5 @@
 /*
- * Copyright © 2015 <code@io7m.com> http://io7m.com
+ * Copyright © 2016 <code@io7m.com> http://io7m.com
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -14,8 +14,19 @@
  * IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
+package com.io7m.jlexing.core;
+
 /**
- * Checkstyle policy.
+ * Types that have lexical information.
+ *
+ * @param <F> The type of file information
  */
 
-package com.io7m.jlexing.checkstyle;
+public interface LexicalType<F>
+{
+  /**
+   * @return The lexical information for the type
+   */
+
+  LexicalPosition<F> lexical();
+}

@@ -15,7 +15,13 @@
  */
 
 /**
- * Checkstyle policy.
+ * Documentation.
  */
 
-package com.io7m.jlexing.checkstyle;
+module com.io7m.jlexing.documentation
+{
+  requires com.io7m.junreachable.core;
+  requires com.io7m.jlexing.core;
+
+  exports com.io7m.jlexing.documentation;
+}
