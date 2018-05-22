@@ -21,6 +21,8 @@
 module com.io7m.jlexing.core
 {
   requires static org.immutables.value;
+  requires static com.io7m.immutables.style;
+
   requires com.io7m.junreachable.core;
 
   exports com.io7m.jlexing.core;

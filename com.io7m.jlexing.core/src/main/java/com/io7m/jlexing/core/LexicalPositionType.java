@@ -17,6 +17,7 @@
 package com.io7m.jlexing.core;
 
 import org.immutables.value.Value;
+import com.io7m.immutables.styles.ImmutablesStyleType;
 
 import java.util.Optional;
 
@@ -26,7 +27,7 @@ import java.util.Optional;
  * @param <F> The type of file information
  */
 
-@ImmutableStyleType
+@ImmutablesStyleType
 @Value.Immutable
 @Value.Modifiable
 public interface LexicalPositionType<F>
