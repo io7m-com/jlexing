@@ -1,5 +1,5 @@
 /*
- * Copyright © 2016 <code@io7m.com> http://io7m.com
+ * Copyright © 2017 Mark Raynsford <code@io7m.com> https://www.io7m.com
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -17,6 +17,7 @@
 package com.io7m.jlexing.core;
 
 import org.immutables.value.Value;
+import com.io7m.immutables.styles.ImmutablesStyleType;
 
 import java.util.Optional;
 
@@ -26,7 +27,7 @@ import java.util.Optional;
  * @param <F> The type of file information
  */
 
-@ImmutableStyleType
+@ImmutablesStyleType
 @Value.Immutable
 @Value.Modifiable
 public interface LexicalPositionType<F>
