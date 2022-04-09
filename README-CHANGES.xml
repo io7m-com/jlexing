@@ -1,44 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?><c:changelog xmlns:c="urn:com.io7m.changelog:4.0" project="com.io7m.jlexing">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<c:changelog project="com.io7m.jlexing" xmlns:c="urn:com.io7m.changelog:4.0">
   <c:releases>
-    <c:release date="2015-10-20T00:00:00+00:00" ticket-system="com.github.io7m.jlexing" version="0.1.0">
+    <c:release date="2015-10-20T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jlexing" version="0.1.0">
       <c:changes>
         <c:change date="2015-10-20T00:00:00+00:00" summary="Initial release."/>
       </c:changes>
     </c:release>
-    <c:release date="2015-10-20T00:00:00+00:00" ticket-system="com.github.io7m.jlexing" version="0.1.1">
+    <c:release date="2015-10-20T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jlexing" version="0.1.1">
       <c:changes>
         <c:change date="2015-10-20T00:00:00+00:00" summary="Add static convenience methods to construct new position values from existing values."/>
       </c:changes>
     </c:release>
-    <c:release date="2016-08-04T00:00:00+00:00" ticket-system="com.github.io7m.jlexing" version="0.1.2">
+    <c:release date="2016-08-04T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jlexing" version="0.1.2">
       <c:changes>
         <c:change date="2016-08-04T00:00:00+00:00" summary="The packaged jar is now an OSGi bundle."/>
       </c:changes>
     </c:release>
-    <c:release date="2016-11-16T00:00:00+00:00" ticket-system="com.github.io7m.jlexing" version="0.2.0">
+    <c:release date="2016-11-16T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jlexing" version="0.2.0">
       <c:changes>
         <c:change compatible="false" date="2016-11-16T00:00:00+00:00" summary="The entire API was replaced with immutables.org generated types."/>
       </c:changes>
     </c:release>
-    <c:release date="2017-04-06T00:00:00+00:00" ticket-system="com.github.io7m.jlexing" version="0.2.1">
+    <c:release date="2017-04-06T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jlexing" version="0.2.1">
       <c:changes>
         <c:change date="2017-04-06T00:00:00+00:00" summary="Rename project. Use the new primogenitor POM and 2017 project conventions."/>
       </c:changes>
     </c:release>
-    <c:release date="2017-04-25T00:00:00+00:00" ticket-system="com.github.io7m.jlexing" version="1.0.0">
+    <c:release date="2017-04-25T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jlexing" version="1.0.0">
       <c:changes>
         <c:change date="2017-04-25T00:00:00+00:00" summary="Initial public API release."/>
       </c:changes>
     </c:release>
-    <c:release date="2017-04-25T00:00:00+00:00" ticket-system="com.github.io7m.jlexing" version="1.1.0">
+    <c:release date="2017-04-25T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jlexing" version="1.1.0">
       <c:changes>
         <c:change date="2017-04-25T00:00:00+00:00" summary="Add convenient LexicalPositions type to construct positions tersely."/>
       </c:changes>
     </c:release>
-    <c:release date="2017-12-07T13:40:22+00:00" ticket-system="com.github.io7m.jlexing" version="2.0.0">
+    <c:release date="2017-12-07T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jlexing" version="2.0.0">
       <c:changes>
         <c:change date="2017-11-28T00:00:00+00:00" summary="Add LexicalType interface that providers can implement"/>
-        <c:change compatible="false" date="2017-12-07T13:40:22+00:00" summary="Publish Java 9 modules, require JDK 9"/>
+        <c:change compatible="false" date="2017-12-07T00:00:00+00:00" summary="Publish Java 9 modules, require JDK 9"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2022-04-09T13:05:58+00:00" is-open="true" ticket-system="com.github.io7m.jlexing" version="3.0.0">
+      <c:changes>
+        <c:change compatible="false" date="2022-04-09T13:05:58+00:00" summary="Require JDK 17"/>
       </c:changes>
     </c:release>
   </c:releases>
