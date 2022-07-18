@@ -16,8 +16,8 @@
 
 package com.io7m.jlexing.core;
 
-import org.immutables.value.Value;
 import com.io7m.immutables.styles.ImmutablesStyleType;
+import org.immutables.value.Value;
 
 import java.util.Optional;
 
@@ -52,4 +52,19 @@ public interface LexicalPositionType<F>
 
   @Value.Parameter
   Optional<F> file();
+
+  /**
+   * The "end" column number. This defines an inclusive span
+   * {@code [column, columnEnd]} and defaults to {@code column} if not
+   * specified.
+   *
+   * @return The column end number
+   * @since 3.1.0
+   */
+
+  @Value.Default
+  default int columnEnd()
+  {
+    return this.column();
+  }
 }
