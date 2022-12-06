@@ -42,9 +42,14 @@
         <c:change compatible="false" date="2017-12-07T00:00:00+00:00" summary="Publish Java 9 modules, require JDK 9"/>
       </c:changes>
     </c:release>
-    <c:release date="2022-04-09T13:13:11+00:00" is-open="false" ticket-system="com.github.io7m.jlexing" version="3.0.0">
+    <c:release date="2022-04-09T00:00:00+00:00" is-open="false" ticket-system="com.github.io7m.jlexing" version="3.0.0">
       <c:changes>
         <c:change compatible="false" date="2022-04-09T00:00:00+00:00" summary="Require JDK 17"/>
+      </c:changes>
+    </c:release>
+    <c:release date="2022-12-06T20:08:03+00:00" is-open="false" ticket-system="com.github.io7m.jlexing" version="3.1.0">
+      <c:changes>
+        <c:change date="2022-12-06T00:00:00+00:00" summary="Add the ability for lexical positions to represent spans."/>
       </c:changes>
     </c:release>
   </c:releases>
