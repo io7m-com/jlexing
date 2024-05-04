@@ -6,7 +6,7 @@ and parsers.
 
 ## Features
 
-*
+* Common immutable lexical position types.
 * High coverage test suite.
 * [OSGi-ready](https://www.osgi.org/)
 * [JPMS-ready](https://en.wikipedia.org/wiki/Java_Platform_Module_System)
