@@ -1,0 +1,39 @@
+
+## jlexing
+
+A package containing various types commonly used in [lexical analyzers](https://en.wikipedia.org/wiki/Lexical_analysis)
+and parsers.
+
+## Features
+
+*
+* High coverage test suite.
+* [OSGi-ready](https://www.osgi.org/)
+* [JPMS-ready](https://en.wikipedia.org/wiki/Java_Platform_Module_System)
+* ISC license.
+
+## Motivation
+
+Many [io7m](https://www.io7m.com/) projects contain hand-written parsers
+and lexers. The `jlexing` package exists to declare common lexer types so
+that nearly-identical versions of those types don't have to be repeatedly
+written for every project.
+
+## Usage
+
+The `LexicalPositionType` represents a span in a region of text. It includes
+a mutable builder for constructing immutable `LexicalPosition` values:
+
+```
+final LexicalPosition.Builder<Path> b0 =
+  LexicalPosition.builder();
+
+b0.setLine(23);
+b0.setColumn(24);
+b0.setColumnEnd(30);
+b0.setFile(Optional.of(path0));
+b0.setFile(path1);
+
+final LexicalPosition<Path> p =
+  b0.build();
+```

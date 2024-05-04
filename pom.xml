@@ -22,7 +22,6 @@
   <modules>
     <module>com.io7m.jlexing.tests</module>
     <module>com.io7m.jlexing.core</module>
-    <module>com.io7m.jlexing.documentation</module>
   </modules>
 
   <properties>
@@ -140,13 +139,6 @@
               </dependency>
             </annotationProcessorPaths>
           </configuration>
-        </plugin>
-
-        <!-- jstructural plugin for generating documentation. -->
-        <plugin>
-          <groupId>com.io7m.jstructural</groupId>
-          <artifactId>io7m-jstructural-maven-plugin</artifactId>
-          <version>5.0.0</version>
         </plugin>
 
         <!-- Spot bugs -->
