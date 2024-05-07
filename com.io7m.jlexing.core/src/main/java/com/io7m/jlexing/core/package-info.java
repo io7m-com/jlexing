@@ -19,7 +19,7 @@
  */
 
 @Export
-@Version("3.1.0")
+@Version("3.2.0")
 package com.io7m.jlexing.core;
 
 import org.osgi.annotation.bundle.Export;
